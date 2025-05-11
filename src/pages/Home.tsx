@@ -1,54 +1,61 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import EUFooter from '../components/EUFooter';
+import EUFooter from "../components/EUFooter";
 
-const trainingModules = [
-  {
-    id: 1,
-    title: "Digital Skills",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400",
-    description: "Learn essential digital skills for the modern workplace"
-  },
-  {
-    id: 2,
-    title: "Communication",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400",
-    description: "Master effective communication techniques"
-  },
-  {
-    id: 3,
-    title: "Leadership",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400",
-    description: "Develop strong leadership capabilities"
-  },
-  {
-    id: 4,
-    title: "Project Management",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400",
-    description: "Learn project management methodologies"
-  },
-  {
-    id: 5,
-    title: "Innovation",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400",
-    description: "Foster innovation and creative thinking"
-  }
+// const trainingModules = [
+//   {
+//     id: 1,
+//     title: "Digital Skills",
+//     image:
+//       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400",
+//     description: "Learn essential digital skills for the modern workplace",
+//   },
+//   {
+//     id: 2,
+//     title: "Communication",
+//     image:
+//       "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400",
+//     description: "Master effective communication techniques",
+//   },
+//   {
+//     id: 3,
+//     title: "Leadership",
+//     image:
+//       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400",
+//     description: "Develop strong leadership capabilities",
+//   },
+//   {
+//     id: 4,
+//     title: "Project Management",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400",
+//     description: "Learn project management methodologies",
+//   },
+//   {
+//     id: 5,
+//     title: "Innovation",
+//     image:
+//       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400",
+//     description: "Foster innovation and creative thinking",
+//   },
+// ];
+const activityDetails = [
+  "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  "https://www.youtube.com/embed/M7lc1UVf-VE",
 ];
 
 function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div 
+      <div
         className="h-[600px] bg-cover bg-center relative"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920')`
+          backgroundImage: `url('../../src/public/assets/Header-Gobra.svg')`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">Welcome to Our Project</h1>
-            <p className="text-xl">Empowering through education and collaboration</p>
+            {/* <h1 className="text-5xl font-bold mb-4">Welcome to TB-GOBRA</h1> */}
+            <p className="text-xl"></p>
           </div>
         </div>
       </div>
@@ -58,28 +65,34 @@ function Home() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Our project aims to bridge educational gaps and foster international collaboration
-            through innovative learning approaches. We bring together partners from across
-            Europe to create comprehensive training modules and facilitate knowledge exchange.
-            Through our initiatives, we strive to develop skills that are essential for
-            success in today's rapidly evolving global landscape.
+            Team Building for Green Organizational Behavior in Rural Areas
+            (TB-GOBRA) is a European project that promotes sustainability,
+            creativity, and collaboration in rural enterprises. Our aim is to
+            equip trainers, adult educators, and rural professionals with
+            innovative team-building methods that combine green values,
+            traditional crafts, sustainable food, and environmental awareness.
+            This platform offers free access to the TB-GOBRA Manual, which
+            presents our full methodology along with practical activities for
+            training and capacity-building.
           </p>
         </div>
       </section>
 
       {/* Training Modules Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Training Modules</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Training Modules
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trainingModules.map((module) => (
-              <Link 
+              <Link
                 key={module.id}
                 to={`/module/${module.id}`}
                 className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-200"
               >
-                <img 
-                  src={module.image} 
+                <img
+                  src={module.image}
                   alt={module.title}
                   className="w-full h-48 object-cover"
                 />
@@ -91,8 +104,71 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+      {/* Project Video Showcase */}
+      <section className="py-20 bg-gray-50">
+        <div className="bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 py-20">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Project Video Showcase
+            </h2>
+            <h1 className="text-xl font-bold text-center mb-12">
+              Watch Our Project in Action
+            </h1>
+            <div className="grid px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+              <ul className="list-disc">
+                <li className="text-xl font-semibold mb-3 text-primary">
+                  Discover how we bring green team-building to life through our
+                  3 main themes
+                </li>
+                <li className="text-xl font-semibold mb-3 text-primary">
+                  Each chapter shows real training sessions and sustainable
+                  practices developed with our partners.
+                </li>
+                <li className="text-xl font-semibold mb-3 text-primary">
+                  Embedded Videos:
+                </li>
+              </ul>
+
+              {/* {trainingModules.map((module) => (
+              <Link
+                key={module.id}
+                to={`/module/${module.id}`}
+                className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-200"
+              >
+                <img
+                  src={module.image}
+                  alt={module.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{module.title}</h3>
+                  <p className="text-gray-600">{module.description}</p>
+                </div>
+              </Link>
+            ))} */}
+              {activityDetails && (
+                <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {activityDetails.map((videoUrl, index) => (
+                      <div key={index} className="aspect-w-16 aspect-h-9">
+                        <iframe
+                          src={videoUrl}
+                          title={`Video ${index + 1}`}
+                          className="w-full h-[300px] rounded-lg shadow-md"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
       <EUFooter />
     </div>
   );

@@ -1,11 +1,10 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Partners from "./pages/Partners";
 import About from "./pages/About";
-import LocalActivities from "./pages/LocalActivities";
-import ProjectResults from "./pages/ProjectResults";
+import LocalActivities from "./pages/Media";
+import ProjectResults from "./pages/EducationalManual";
 import ActivityDetails from "./pages/ActivityDetails";
 import ModuleDetails from "./pages/ModuleDetails";
 
@@ -18,9 +17,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/about" element={<About />} />
-          <Route path="/local-activities" element={<LocalActivities />} />
-          <Route path="/project-results" element={<ProjectResults />} />
-          <Route path="/activity/:country" element={<ActivityDetails />} />
+          <Route path="/media" element={<LocalActivities />} />
+          <Route path="/educationalManual" element={<ProjectResults />} />
+          <Route path="/activity/:id" element={<ActivityDetails />} />
           <Route path="/module/:id" element={<ModuleDetails />} />
         </Routes>
       </div>

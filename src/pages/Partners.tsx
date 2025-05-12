@@ -1,64 +1,117 @@
-import React from 'react';
-import { Facebook, Twitter } from 'lucide-react';
-import EUFooter from '../components/EUFooter';
+import { Facebook, Twitter } from "lucide-react";
+import EUFooter from "../components/EUFooter";
+import { useState } from "react";
 
 const partners = [
   {
-    name: "Digital Innovation Hub",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300",
+    id: 1,
+    name: "EUth Wonders e.V. (Germany)",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300",
     facebook: "https://facebook.com",
-    twitter: "https://twitter.com"
+    twitter: "https://twitter.com",
+    description:
+      "EUth Wonders is a youth-focused NGO based in Bonn, Germany, dedicated to promoting social inclusion, civic engagement, and intercultural dialogue through non-formal education. The organization works extensively with young people and educators to build innovative and inclusive learning environments. Within TB-GOBRA, EUth Wonders acts as the project coordinator, leading the overall design, communication, and implementation of activities. They also support the dissemination of results and organize local and international training activities, with a strong emphasis on sustainability and community participation.",
   },
   {
-    name: "Tech Academy",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300",
+    id: 2,
+    name: "University of Lapland (Finland)",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300",
     facebook: "https://facebook.com",
-    twitter: "https://twitter.com"
+    twitter: "https://twitter.com",
+    description:
+      "The University of Lapland, located in Rovaniemi, is a leading institution in Arctic art, design, and education. With deep expertise in sustainable development and traditional crafts, the university contributes to TB-GOBRA by integrating environmental values into craft-based learning. The Finnish team designed and delivered the Sustainable Craft Team Building module, including creative activities such as mushroom felting and traditional Himmeli crafting. They bring academic depth, creativity, and a strong focus on eco-friendly pedagogical approaches to the partnership.",
   },
   {
-    name: "Education First",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=300",
+    id: 3,
+    name: "IVI – Igor Vitale Internationale (Italy)",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=300",
     facebook: "https://facebook.com",
-    twitter: "https://twitter.com"
+    twitter: "https://twitter.com",
+    description:
+      "IVI is an Italian research and training institute that combines psychology, education, and well-being. With a strong background in adult learning and social integration, IVI contributed to TB-GOBRA through the development of the Sustainable Cooking Team Building module. Their team designed and led hands-on workshops promoting green values through culinary arts, while also evaluating the impact of the educational process. IVI plays a key role in ensuring the project’s methods are engaging, inclusive, and impactful for both learners and educators.",
   },
-  {
-    name: "Future Skills Institute",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=300",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com"
-  },
-  {
-    name: "Innovation Center",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com"
-  }
 ];
 
 function Partners() {
+  const [selectedPartner, setSelectedPartner] = useState<string | null>(null);
+
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Partners</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {partners.map((partner, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
-              <img 
-                src={partner.image} 
-                alt={partner.name}
-                className="w-32 h-32 object-cover rounded-full mb-4"
-              />
-              <h3 className="text-lg font-semibold text-center mb-4">{partner.name}</h3>
-              <div className="flex space-x-4">
-                <a href={partner.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <Facebook size={24} />
-                </a>
-                <a href={partner.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
-                  <Twitter size={24} />
-                </a>
+      <div className="bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center mb-12 text-primary">
+            Our Partners
+          </h1>
+
+          {/* Partner Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {partners.map((partner) => (
+              <div
+                key={partner.id}
+                className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+                onClick={() =>
+                  setSelectedPartner(
+                    selectedPartner === partner.id.toString()
+                      ? null
+                      : partner.id.toString()
+                  )
+                }
+              >
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                  className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-primary"
+                />
+                <h3 className="text-xl font-semibold text-center mb-2 text-gray-900">
+                  {partner.name}
+                </h3>
+                <div className="flex space-x-4 mb-4">
+                  <a
+                    href={partner.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <Facebook size={24} />
+                  </a>
+                  <a
+                    href={partner.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-600"
+                  >
+                    <Twitter size={24} />
+                  </a>
+                </div>
+                <button className="bg-primary text-white py-2 px-6 rounded-lg shadow-md hover:bg-primary-dark transition-colors">
+                  Learn More
+                </button>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Partner Details */}
+          <div className="max-w-3xl mx-auto">
+            {partners.map(
+              (partner) =>
+                selectedPartner === partner.id.toString() && (
+                  <div
+                    key={partner.id}
+                    className="bg-white p-8 rounded-lg shadow-lg mb-8"
+                  >
+                    <h3 className="text-2xl font-semibold mb-4 text-primary">
+                      {partner.name}
+                    </h3>
+                    <p className="text-gray-700 text-lg">
+                      {partner.description}
+                    </p>
+                  </div>
+                )
+            )}
+          </div>
         </div>
       </div>
       <EUFooter />

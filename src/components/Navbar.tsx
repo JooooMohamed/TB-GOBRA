@@ -29,18 +29,18 @@ function Navbar() {
               <span>About</span>
             </Link>
             <Link
-              to="/local-activities"
+              to="/media"
               className="flex items-center space-x-2 text-white hover:text-secondary"
             >
               <Activity size={20} />
-              <span>Local Activities</span>
+              <span>Media</span>
             </Link>
             <Link
-              to="/project-results"
+              to="/educationalManual"
               className="flex items-center space-x-2 text-white hover:text-secondary"
             >
               <FileText size={20} />
-              <span>Project Results</span>
+              <span>Manual</span>
             </Link>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { FaLeaf, FaSeedling, FaUtensils } from "react-icons/fa";
-import EUthWondersLogo from "../public/assets/Header-Gobra.svg";
-import UniversityOfLaplandLogo from "../public/assets/Header-Gobra.svg";
-import IVILogo from "../public/assets/Header-Gobra.svg";
+import EUthWondersLogo from "/assets/Header-Gobra.svg";
+import UniversityOfLaplandLogo from "/assets/Header-Gobra.svg";
+import IVILogo from "/assets/Header-Gobra.svg";
 import EUFooter from "../components/EUFooter";
 
 const AboutPage = () => {

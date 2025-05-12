@@ -41,25 +41,25 @@ import EUFooter from "../components/EUFooter";
 const activities = [
   {
     country: "UK",
-    flag: "../src/public/assets/UK_flag.png",
+    flag: "/assets/UK_flag.png",
     title: "Download in English",
     link: "https://drive.google.com/file/d/1lFgyhJAVQ1sOXAycSgi915mUPGqwgJ-r/view?usp=drive_link",
   },
   {
     country: "germany",
-    flag: "../src/public/assets/Flag_of_Germany.svg.png",
+    flag: "/assets/Flag_of_Germany.svg.png",
     title: "Download in German",
     link: "https://drive.google.com/file/d/1Z55KkXUmrj0SrQTKC0JKQxmATVxdfXAy/view?usp=drive_link",
   },
   {
     country: "italy",
-    flag: "../src/public/assets/Flag_of_Italy.png",
+    flag: "/assets/Flag_of_Italy.png",
     title: "Download in Italian",
     link: "",
   },
   {
     country: "finland",
-    flag: "../src/public/assets/Flag_of_Finland.svg.png",
+    flag: "/assets/Flag_of_Finland.svg.png",
     title: "Download in Finnish",
     link: "https://drive.google.com/file/d/1ttpUxQXbgxGoS80-o5Vt5x8TzX3JlE1F/view?usp=drive_link",
   },
@@ -82,7 +82,7 @@ function Home() {
       <div
         className="h-[600px] bg-cover bg-center relative"
         style={{
-          backgroundImage: `url('../../src/public/assets/Header-Gobra.svg')`,
+          backgroundImage: `url('/assets/Header-Gobra.svg')`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

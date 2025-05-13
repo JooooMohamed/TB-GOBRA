@@ -5,6 +5,11 @@ function EUFooter() {
     <div className="bg-primary text-white py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col items-center space-y-6">
+          <img
+            src={"/assets/images/Co-fundedbytheEU.png"}
+            alt="EUth Wonders"
+            className="h-10 bg-white object-cover mb-2 text-center"
+          />
           <h2 className="text-3xl font-bold text-center mb-8">
             Co-funded by Erasmus+
           </h2>

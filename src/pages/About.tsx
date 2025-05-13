@@ -1,7 +1,4 @@
 import { FaLeaf, FaSeedling, FaUtensils } from "react-icons/fa";
-import EUthWondersLogo from "/assets/Header-Gobra.svg";
-import UniversityOfLaplandLogo from "/assets/Header-Gobra.svg";
-import IVILogo from "/assets/Header-Gobra.svg";
 import EUFooter from "../components/EUFooter";
 
 const AboutPage = () => {
@@ -93,7 +90,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer">
                 <div className="text-center mb-8">
                   <img
-                    src={EUthWondersLogo}
+                    src={"/assets/images/Header-Gobra.svg"}
                     alt="EUth Wonders"
                     className="w-full h-48 object-cover mb-2"
                   />
@@ -110,7 +107,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer ">
                 <div className="text-center ">
                   <img
-                    src={UniversityOfLaplandLogo}
+                    src={"/assets/images/Header-Gobra.svg"}
                     alt="University of Lapland"
                     className="w-full h-48 object-cover mb-2"
                   />
@@ -127,7 +124,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer">
                 <div className="text-center">
                   <img
-                    src={IVILogo}
+                    src={"/assets/images/Header-Gobra.svg"}
                     alt="IVI"
                     className="w-full h-48 object-cover mb-2"
                   />

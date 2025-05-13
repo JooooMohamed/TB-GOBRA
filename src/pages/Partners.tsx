@@ -6,8 +6,7 @@ const partners = [
   {
     id: 1,
     name: "EUth Wonders e.V. (Germany)",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300",
+    image: "/assets/images/EUW-Logo.svg",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     description:
@@ -16,8 +15,7 @@ const partners = [
   {
     id: 2,
     name: "University of Lapland (Finland)",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300",
+    image: "/assets/images/Lapin.png",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     description:
@@ -26,8 +24,7 @@ const partners = [
   {
     id: 3,
     name: "IVI – Igor Vitale Internationale (Italy)",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=300",
+    image: "/assets/images/logo-igor-vitale.jpg",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     description:
@@ -60,11 +57,13 @@ function Partners() {
                   )
                 }
               >
-                <img
-                  src={partner.image}
-                  alt={partner.name}
-                  className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-primary"
-                />
+                <div className="flex items-center justify-center w-32 h-32 rounded-full border-4 border-primary overflow-hidden mb-4">
+                  <img
+                    src={partner.image}
+                    alt={partner.name}
+                    className="w-full h-full object-contain rounded-full"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-center mb-2 text-gray-900">
                   {partner.name}
                 </h3>

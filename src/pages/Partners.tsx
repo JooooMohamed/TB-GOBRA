@@ -1,4 +1,4 @@
-import { Facebook, Twitter } from "lucide-react";
+import { Facebook, Globe, Instagram } from "lucide-react";
 import EUFooter from "../components/EUFooter";
 import { useState } from "react";
 
@@ -7,8 +7,9 @@ const partners = [
     id: 1,
     name: "EUth Wonders e.V. (Germany)",
     image: "/assets/images/EUW-Logo.svg",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
+    facebook: "https://www.facebook.com/EUthWonders",
+    instgram: "https://www.instagram.com/euthwondersev/",
+    website: "https://www.euthwonders.org/",
     description:
       "EUth Wonders is a youth-focused NGO based in Bonn, Germany, dedicated to promoting social inclusion, civic engagement, and intercultural dialogue through non-formal education. The organization works extensively with young people and educators to build innovative and inclusive learning environments. Within TB-GOBRA, EUth Wonders acts as the project coordinator, leading the overall design, communication, and implementation of activities. They also support the dissemination of results and organize local and international training activities, with a strong emphasis on sustainability and community participation.",
   },
@@ -16,8 +17,9 @@ const partners = [
     id: 2,
     name: "University of Lapland (Finland)",
     image: "/assets/images/Lapin.png",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
+    facebook: "https://www.facebook.com/ulapland/?locale=fi_FI",
+    instgram: "https://www.instagram.com/universityoflapland/",
+    website: "https://www.ulapland.fi/en",
     description:
       "The University of Lapland, located in Rovaniemi, is a leading institution in Arctic art, design, and education. With deep expertise in sustainable development and traditional crafts, the university contributes to TB-GOBRA by integrating environmental values into craft-based learning. The Finnish team designed and delivered the Sustainable Craft Team Building module, including creative activities such as mushroom felting and traditional Himmeli crafting. They bring academic depth, creativity, and a strong focus on eco-friendly pedagogical approaches to the partnership.",
   },
@@ -25,8 +27,7 @@ const partners = [
     id: 3,
     name: "IVI – Igor Vitale Internationale (Italy)",
     image: "/assets/images/logo-igor-vitale.jpg",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
+    facebook: "https://www.facebook.com/igor.vitale?locale=fi_FI",
     description:
       "IVI is an Italian research and training institute that combines psychology, education, and well-being. With a strong background in adult learning and social integration, IVI contributed to TB-GOBRA through the development of the Sustainable Cooking Team Building module. Their team designed and led hands-on workshops promoting green values through culinary arts, while also evaluating the impact of the educational process. IVI plays a key role in ensuring the project’s methods are engaging, inclusive, and impactful for both learners and educators.",
   },
@@ -77,12 +78,20 @@ function Partners() {
                     <Facebook size={24} />
                   </a>
                   <a
-                    href={partner.twitter}
+                    href={partner.instgram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-600"
                   >
-                    <Twitter size={24} />
+                    <Instagram size={24} />
+                  </a>
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-600"
+                  >
+                    <Globe size={24} />
                   </a>
                 </div>
                 <button className="bg-primary text-white py-2 px-6 rounded-lg shadow-md hover:bg-primary-dark transition-colors">

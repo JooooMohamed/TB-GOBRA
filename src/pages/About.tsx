@@ -90,7 +90,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer">
                 <div className="text-center mb-8">
                   <img
-                    src={"/assets/images/Header-Gobra.svg"}
+                    src={"/assets/images/EUW-Logo.svg"}
                     alt="EUth Wonders"
                     className="w-full h-48 object-cover mb-2"
                   />
@@ -107,7 +107,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer ">
                 <div className="text-center ">
                   <img
-                    src={"/assets/images/Header-Gobra.svg"}
+                    src={"/assets/images/Lapin.png"}
                     alt="University of Lapland"
                     className="w-full h-48 object-cover mb-2"
                   />
@@ -124,7 +124,7 @@ const AboutPage = () => {
               <div className=" gap-8 cursor-pointer">
                 <div className="text-center">
                   <img
-                    src={"/assets/images/Header-Gobra.svg"}
+                    src={"/assets/images/logo-igor-vitale.jpg"}
                     alt="IVI"
                     className="w-full h-48 object-cover mb-2"
                   />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import EUFooter from "../components/EUFooter";
 
 // const trainingModules = [
@@ -254,12 +255,12 @@ function Home() {
                   we’re helping communities go green.
                 </p>
 
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="inline-block cent bg-primary text-white font-semibold text-base px-5 py-4 rounded-md shadow-lg hover:bg-green-700 transition-colors"
                 >
                   Go to About the Project
-                </a>
+                </Link>
               </div>
             </section>
           </div>

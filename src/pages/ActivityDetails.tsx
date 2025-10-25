@@ -22,16 +22,18 @@ const activityDetails: Record<
     Filming: `Mauri Lähdesmäki`,
     EditedBy: `Media Route`,
     images: [
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
+      "/assets/images/AGRIFOOD/2EDC4FB1-44B8-41D5-AFE6-76051BF99F33.jpg",
+      "/assets/images/AGRIFOOD/7c4b0b7e-0542-49c7-9009-adccef0d18a7.jpg",
+      "/assets/images/AGRIFOOD/IMG_0244.JPG",
+      "/assets/images/AGRIFOOD/IMG_0249.JPG",
+      "/assets/images/AGRIFOOD/IMG_0273.JPG",
+      "/assets/images/AGRIFOOD/IMG_0340.JPG",
+      "/assets/images/AGRIFOOD/IMG_0351.JPG",
+      "/assets/images/AGRIFOOD/IMG_0352.JPG",
     ],
     videos: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "https://www.youtube.com/embed/M7lc1UVf-VE",
+      "/assets/images/AGRIFOOD/IMG_0241.MOV",
+      "/assets/images/AGRIFOOD/IMG_0255.MOV",
     ],
   },
   2: {
@@ -41,16 +43,21 @@ const activityDetails: Record<
     Filming: `Mauri Lähdesmäki`,
     EditedBy: `Media Route`,
     images: [
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
+      "/assets/images/CRAFTS/9662badf-97fd-4705-8c5d-134fe67d50d0.jpg",
+      "/assets/images/CRAFTS/acb1968b-7461-4f41-9021-c3555ac1844e.jpg",
+      "/assets/images/CRAFTS/IMG_0240.JPG",
+      "/assets/images/CRAFTS/IMG_0421.JPG",
+      "/assets/images/CRAFTS/IMG_0463.JPG",
+      "/assets/images/CRAFTS/IMG_0465.JPG",
+      "/assets/images/CRAFTS/IMG_0468.JPG",
+      "/assets/images/CRAFTS/IMG_0470.JPG",
+      "/assets/images/CRAFTS/IMG_0472.JPG",
+      "/assets/images/CRAFTS/IMG_0479.JPG",
+      "/assets/images/CRAFTS/IMG_0484.JPG",
     ],
     videos: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "https://www.youtube.com/embed/M7lc1UVf-VE",
+      "/assets/images/CRAFTS/IMG_0417.MOV",
+      "/assets/images/CRAFTS/IMG_0432.MOV",
     ],
   },
   3: {
@@ -60,17 +67,20 @@ const activityDetails: Record<
     Filming: `Mauri Lähdesmäki`,
     EditedBy: `Media Route`,
     images: [
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400",
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400",
+      "/assets/images/Cookin/IMG-20240922-WA0018.jpg",
+      "/assets/images/Cookin/IMG_0021.JPG",
+      "/assets/images/Cookin/IMG_0032.JPG",
+      "/assets/images/Cookin/IMG_0040.JPG",
+      "/assets/images/Cookin/IMG_0047.JPG",
+      "/assets/images/Cookin/IMG_0053.JPG",
+      "/assets/images/Cookin/IMG_0056.JPG",
+      "/assets/images/Cookin/IMG_0068.JPG",
+      "/assets/images/Cookin/IMG_0077.JPG",
+      "/assets/images/Cookin/IMG_0079.JPG",
+      "/assets/images/Cookin/IMG_0239.JPG",
+      "/assets/images/Cookin/IMG_0289.JPG",
     ],
-    videos: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "https://www.youtube.com/embed/M7lc1UVf-VE",
-    ],
+    videos: ["/assets/images/Cookin/MVI_0005.MP4"],
   },
   // Add similar objects for other countries
 };
@@ -140,13 +150,30 @@ function ActivityDetails() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {details.videos.map((videoUrl, index) => (
                 <div key={index} className="aspect-w-16 aspect-h-9">
-                  <iframe
-                    src={videoUrl}
-                    title={`Video ${index + 1}`}
-                    className="w-full h-[300px] rounded-lg shadow-md"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  {videoUrl.includes("youtube.com") ||
+                  videoUrl.includes("youtu.be") ? (
+                    <iframe
+                      src={
+                        videoUrl.includes("?")
+                          ? `${videoUrl}&autoplay=0`
+                          : `${videoUrl}?autoplay=0`
+                      }
+                      title={`Video ${index + 1}`}
+                      className="w-full h-[300px] rounded-lg shadow-md"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <video
+                      src={videoUrl}
+                      title={`Video ${index + 1}`}
+                      className="w-full h-[300px] rounded-lg shadow-md"
+                      controls
+                      playsInline
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 </div>
               ))}
             </div>

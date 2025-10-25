@@ -67,14 +67,26 @@ const activities = [
 ];
 
 const activityDetails = [
-  "https://www.youtube.com/embed/HEnOE-W2OeQ",
-  "https://www.youtube.com/embed/wPb314vIKOA",
-  "https://www.youtube.com/embed/NI_82jWNbkw",
+  "https://www.youtube.com/embed/SfFmPB3iIsU",
+  "https://www.youtube.com/embed/ARKBljP3LEI",
+  "https://www.youtube.com/embed/J1L0UkTPxOk",
 ];
 const handleCardClick = (item: { link: string; title: string }) => {
-  if (item?.link === "") return;
-  const link = item?.link;
-  window.open(link, "_blank");
+  if (!item?.link) return;
+
+    const match = item.link.match(/\/d\/(.*?)\//);
+  const directLink = match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : item.link;
+
+  const pdfWindow = window.open("", "_blank");
+  pdfWindow?.document.write(`
+    <html>
+      <head><title>${item.title}</title></head>
+      <body style="margin:0;">
+        <embed src="${directLink}" type="application/pdf" width="100%" height="100%" />
+      </body>
+    </html>
+  `);
+
 };
 function Home() {
   return (

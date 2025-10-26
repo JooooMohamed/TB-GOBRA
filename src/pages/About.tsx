@@ -89,11 +89,13 @@ const AboutPage = () => {
             <div className="max-w-6xl mx-auto  bg-white rounded-lg shadow-md overflow-hidden">
               <div className=" gap-8 cursor-pointer">
                 <div className="text-center mb-8">
-                  <img
-                    src={"/assets/images/EUW-Logo.svg"}
-                    alt="EUth Wonders"
-                    className="w-full h-48 object-cover mb-2"
-                  />
+                  <div className="flex justify-center max-w-40 mx-auto">
+                    <img
+                      src={"/assets/images/EUW-Logo.svg"}
+                      alt="EUth Wonders"
+                      className="w-full h-48 object-cover mb-2"
+                    />
+                  </div>
                   <h4 className="text-xl font-semibold mb-2">
                     EUth Wonders (Germany)
                   </h4>

@@ -5,25 +5,25 @@ const activities = [
     country: "UK",
     flag: "/assets/images/UK_flag.png",
     title: "Download in English",
-    link: "https://drive.google.com/file/d/1lFgyhJAVQ1sOXAycSgi915mUPGqwgJ-r/view?usp=drive_link",
+    link: "/assets/pdfs/TB-GOBRA Manual - ENG.pdf",
   },
   {
     country: "germany",
     flag: "/assets/images/Flag_of_Germany.svg.png",
     title: "Download in German",
-    link: "https://drive.google.com/file/d/1Z55KkXUmrj0SrQTKC0JKQxmATVxdfXAy/view?usp=drive_link",
+    link: "/assets/pdfs/TB-GOBRA Manual - GER.pdf",
   },
   {
     country: "italy",
     flag: "/assets/images/Flag_of_Italy.png",
     title: "Download in Italian",
-    link: "",
+    link: "/assets/pdfs/TB-GOBRA Manual - ITA.pdf",
   },
   {
     country: "finland",
     flag: "/assets/images/Flag_of_Finland.svg.png",
     title: "Download in Finnish",
-    link: "https://drive.google.com/file/d/1ttpUxQXbgxGoS80-o5Vt5x8TzX3JlE1F/view?usp=drive_link",
+    link: "/assets/pdfs/TB-GOBRA Manual - FIN.pdf",
   },
 ];
 const handleCardClick = (item: { link: string; title: string }) => {

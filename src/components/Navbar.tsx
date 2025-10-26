@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home, Users, Info, Activity, FileText, Menu, X } from "lucide-react";
+import { Home, Users, Info, Activity, FileText, Menu, X, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -70,6 +70,13 @@ function NavLinks() {
       >
         <FileText size={20} />
         <span>Manual</span>
+      </Link>
+       <Link
+        to="/impactStudies"
+        className="flex items-center space-x-2 text-white hover:text-secondary"
+      >
+        <BarChart3 size={20} />
+        <span>Impact Studies</span>
       </Link>
     </>
   );

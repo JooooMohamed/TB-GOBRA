@@ -5,6 +5,7 @@ import Partners from "./pages/Partners";
 import About from "./pages/About";
 import LocalActivities from "./pages/Media";
 import ProjectResults from "./pages/EducationalManual";
+import ImpactStudies from "./pages/ImpactStudies";
 import ActivityDetails from "./pages/ActivityDetails";
 import ModuleDetails from "./pages/ModuleDetails";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/media" element={<LocalActivities />} />
           <Route path="/educationalManual" element={<ProjectResults />} />
+          <Route path="/impactStudies" element={<ImpactStudies />} />
           <Route path="/activity/:id" element={<ActivityDetails />} />
           <Route path="/module/:id" element={<ModuleDetails />} />
         </Routes>
